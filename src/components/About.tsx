@@ -49,7 +49,7 @@ const About = () => {
           <div className="animate-on-scroll opacity-0">
             <h3 className="text-2xl font-bold mb-4">Front-End Developer & UI/UX Designer</h3>
             <p className="text-zinc-300 mb-6">
-              I'm a passionate front-end developer with 5+ years of experience creating 
+              I'm a passionate front-end developer engaged in creating 
               engaging and intuitive user interfaces. My journey in web development 
               started with a curiosity about how websites work and evolved into a 
               deep passion for crafting exceptional digital experiences.
@@ -57,7 +57,7 @@ const About = () => {
             <p className="text-zinc-300 mb-8">
               I believe in writing clean, maintainable code and staying up-to-date with 
               the latest technologies and best practices. When I'm not coding, you can 
-              find me exploring new design trends, contributing to open-source projects, 
+              find me exploring new design trends (or in the gym), contributing to open-source projects, 
               or enjoying a good cup of coffee.
             </p>
             
