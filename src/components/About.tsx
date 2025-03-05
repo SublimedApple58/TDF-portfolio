@@ -51,16 +51,13 @@ const About = () => {
               <div className="bg-zinc-900/50 rounded-lg p-8 backdrop-blur-sm">
                 <h3 className="text-2xl font-bold mb-4 text-emerald-400">Front-End Developer & UI/UX Designer</h3>
                 <p className="text-zinc-300 mb-6 leading-relaxed">
-                  I'm a passionate front-end developer with 5+ years of experience creating 
-                  engaging and intuitive user interfaces. My journey in web development 
-                  started with a curiosity about how websites work and evolved into a 
-                  deep passion for crafting exceptional digital experiences.
+                I'm a passionate front-end developer specializing in React and Next.js, with a strong focus on creating seamless and high-performance user interfaces. My journey began with a deep curiosity for web technologies, which quickly turned into a drive to build scalable and efficient digital experiences. I thrive on solving complex UI challenges and continuously improving my skills to deliver top-tier front-end solutions.
                 </p>
                 <p className="text-zinc-300 mb-8 leading-relaxed">
                   I believe in writing clean, maintainable code and staying up-to-date with 
                   the latest technologies and best practices. When I'm not coding, you can 
                   find me exploring new design trends, contributing to open-source projects, 
-                  or enjoying a good cup of coffee.
+                  or simply in the gym.
                 </p>
                 
                 <div className="grid grid-cols-2 gap-6">
@@ -70,7 +67,7 @@ const About = () => {
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-emerald-400 rounded-full"></div>
-                    <span>open mind as salvation</span>
+                    <span>Open mind as salvation</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-emerald-400 rounded-full"></div>
