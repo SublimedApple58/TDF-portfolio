@@ -66,11 +66,11 @@ const About = () => {
                 <div className="grid grid-cols-2 gap-6">
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-emerald-400 rounded-full"></div>
-                    <span>Based in Milan, Italy</span>
+                    <span>Based in Abruzzo, Italy</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-emerald-400 rounded-full"></div>
-                    <span>Available for Freelance</span>
+                    <span>open mind as salvation</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-emerald-400 rounded-full"></div>

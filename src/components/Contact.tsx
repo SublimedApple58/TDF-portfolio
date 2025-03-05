@@ -115,7 +115,7 @@ const Contact = () => {
                 <div className="mt-8 p-4 bg-emerald-400/10 rounded-lg">
                   <p className="text-emerald-400 font-medium">Available for Opportunities</p>
                   <p className="text-zinc-300 mt-2">
-                    Currently open to freelance projects and full-time positions.
+                    Always open to hearing what you have to propose
                   </p>
                 </div>
               </div>
