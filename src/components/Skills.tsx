@@ -1,23 +1,32 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 const Skills = () => {
   const sectionRef = useRef<HTMLElement>(null);
-  
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('animate-fade-in-up');
+
+            // Riempie la barra di avanzamento quando entra nella viewport
+            const progressBars = entry.target.querySelectorAll('.progress-bar');
+            progressBars.forEach((bar) => {
+              const targetWidth = bar.getAttribute('data-width');
+              if (targetWidth) {
+                (bar as HTMLElement).style.width = targetWidth; // Assegna la width
+              }
+            });
           }
         });
       },
       { threshold: 0.1 }
     );
-    
+
     const elements = sectionRef.current?.querySelectorAll('.animate-on-scroll');
     elements?.forEach((el) => observer.observe(el));
-    
+
     return () => {
       elements?.forEach((el) => observer.unobserve(el));
     };
@@ -57,8 +66,9 @@ const Skills = () => {
             I've developed a diverse set of skills throughout my career, focusing on front-end technologies and UI/UX design.
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 gap-12">
+          {/* Technical Skills */}
           <div className="animate-on-scroll opacity-0">
             <h3 className="text-2xl font-bold mb-8 flex items-center">
               <span className="w-8 h-8 bg-emerald-400 rounded-full flex items-center justify-center text-zinc-900 mr-3">
@@ -66,7 +76,7 @@ const Skills = () => {
               </span>
               Technical Skills
             </h3>
-            
+
             <div className="space-y-6">
               {technicalSkills.map((skill, index) => (
                 <div key={index}>
@@ -76,9 +86,9 @@ const Skills = () => {
                   </div>
                   <div className="w-full h-2 bg-zinc-700 rounded-full overflow-hidden">
                     <div 
-                      className="h-full bg-emerald-400 rounded-full transition-all duration-1000 ease-out"
-                      style={{ width: '0%' }}
-                      data-width={`${skill.level}%`}
+                      className="progress-bar h-full bg-emerald-400 rounded-full transition-all duration-1000 ease-out"
+                      style={{ width: '0%' }} 
+                      data-width={`${skill.level}%`} // Imposta la percentuale come attributo
                     ></div>
                   </div>
                 </div>
@@ -86,6 +96,7 @@ const Skills = () => {
             </div>
           </div>
           
+          {/* Soft Skills */}
           <div className="animate-on-scroll opacity-0">
             <h3 className="text-2xl font-bold mb-8 flex items-center">
               <span className="w-8 h-8 bg-emerald-400 rounded-full flex items-center justify-center text-zinc-900 mr-3">
@@ -93,7 +104,7 @@ const Skills = () => {
               </span>
               Soft Skills & Tools
             </h3>
-            
+
             <div className="flex flex-wrap gap-3">
               {softSkills.map((skill, index) => (
                 <span 
@@ -104,8 +115,8 @@ const Skills = () => {
                 </span>
               ))}
             </div>
-            
-            <h3 className="text-2xl font-bold mt-12 mb-6">Development Workflow</h3>
+
+            <h3 className="text-2xl font-bold mt-12 mb-6">MY Development Workflow</h3>
             <div className="space-y-4">
               <div className="flex items-start">
                 <div className="w-12 h-12 bg-zinc-800 rounded-full flex items-center justify-center text-emerald-400 mr-4 flex-shrink-0">
@@ -116,7 +127,7 @@ const Skills = () => {
                   <p className="text-zinc-400">Understanding requirements and researching best approaches</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <div className="w-12 h-12 bg-zinc-800 rounded-full flex items-center justify-center text-emerald-400 mr-4 flex-shrink-0">
                   2
@@ -126,7 +137,7 @@ const Skills = () => {
                   <p className="text-zinc-400">Creating wireframes and interactive prototypes</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <div className="w-12 h-12 bg-zinc-800 rounded-full flex items-center justify-center text-emerald-400 mr-4 flex-shrink-0">
                   3
@@ -136,18 +147,18 @@ const Skills = () => {
                   <p className="text-zinc-400">Writing clean, maintainable, and efficient code</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <div className="w-12 h-12 bg-zinc-800 rounded-full flex items-center justify-center text-emerald-400 mr-4 flex-shrink-0">
                   4
                 </div>
                 <div>
-                  <h4 className="font-bold mb-1">Testing & Optimization</h4>
+                  <h4 className="font-bold mb-1">Testing & Optimization (QA)</h4>
                   <p className="text-zinc-400">Ensuring quality and performance across devices</p>
                 </div>
               </div>
             </div>
-          </div>
+          </div>          
         </div>
       </div>
     </section>
