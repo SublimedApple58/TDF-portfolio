@@ -103,7 +103,7 @@ const Projects = () => {
     return () => {
       elements?.forEach((el) => observer.unobserve(el));
     };
-  }, []);
+  }, [filteredProjects]);
 
   useEffect(() => {
     // Animate progress bars when they come into view
